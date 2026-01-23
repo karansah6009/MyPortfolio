@@ -36,7 +36,7 @@ const Home = () => {
         </div>
         </div>
         <div class="info-sec">
-          <div class="info-card">
+          <div class="info-card"> 
             <h1>2+</h1>
             <p>Years<br />Experience</p>
           </div>

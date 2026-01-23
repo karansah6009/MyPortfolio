@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f5f5f5;
 }
 .contact_container{
     display: flex;
@@ -12,7 +11,9 @@
     justify-content: space-between;
     height: 700px;
     width: 1500px;
+    border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    background-color: rgb(45, 75, 79);
 }
 .left{
     flex: 1;
@@ -52,6 +53,7 @@ form input, form textarea{
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
+    background-color: #e2f2f6;
 }
 form button{
     padding: 10px;
@@ -62,4 +64,5 @@ form button{
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    width: 421px;
 }

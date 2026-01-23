@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,47 +7,70 @@
     width: 95%;
     height: 80px;
 }
-.navbar-logo{
+
+.navbar-logo {
     color: #fff;
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
 }
-.navbar-opt ul{
+
+@keyframes animate-gradient {
+    to {
+        background-position: 200px;
+    }
+}
+
+.navbar-logo span {
+    background: linear-gradient(to right, #4acfee, #53f8c9, #6070fd, #5bbdff, #4acfee);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+.navbar-opt ul {
     display: flex;
     gap: 50px;
     list-style: none;
 }
-.navbar-li{
+
+.navbar-li {
     font-size: 24px;
     cursor: pointer;
     color: #fff;
 }
-.navbar-opt ul li:hover{
-    color: #ff6347;
+
+.navbar-opt ul li:hover {
+    color: #53f8c9;
     transition: 0.3s;
 }
-.navbar-opt hr{
+
+.navbar-opt hr {
     margin-top: 5px;
     border: 0;
     height: 2px;
     width: 60px;
-    background-color: #ff6347;
+    background-color: #53f8c9;
     transition: 0.3s;
 }
-.navbar-cv button{
-    background-color: transparent;  
+
+.navbar-cv button {
+    background-color: transparent;
     padding: 10px 20px;
-    border: 0.5px solid #ff6347;
+    border: 0.5px solid #53f8c9;
     border-radius: 5px;
-    color: #ff6347;
+    color: #53f8c9;
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
 }
-.navbar-cv button:hover{
-    background-color: #ff6347;
+
+.navbar-cv button:hover {
+    background-color: #53f8c9;
     color: #fff;
     transition: 0.3s;
+    box-shadow: 0 0 15px #4acfee;
 }

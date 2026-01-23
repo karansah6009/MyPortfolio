@@ -15,6 +15,7 @@
     border-radius: 10px;
     gap: 150px;
     justify-content: space-between;
+    background-color: rgb(45, 75, 79);
 }
 .about_left{
     display: flex;

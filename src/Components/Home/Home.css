@@ -60,13 +60,19 @@
     
 }
 .ul-icon a:hover{
-    color: black;
+    color: #4acfee;
+}
+@keyframes animate-gradient {
+    to{
+        background-position: 200px; 
+    }
 }
 .btn{
     display: inline-block;
     padding: 10px 25px;
-    background: #4acfee;
+    background: linear-gradient(to right,#4acfee,#53f8c9,#8e97ec,#4a9fd7,#40bbd6);
     color: #0e1217;
+    animation: animate-gradient 7s linear infinite;
     border-radius: 30px;
     text-decoration: none;
     font-size: 18px;

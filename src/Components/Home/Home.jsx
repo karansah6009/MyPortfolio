@@ -9,21 +9,19 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Home = () => {
-  const sectionStyle = {
-    backgroundImage: `url(${portBck})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundAttachment: 'fixed',
+  function handleClick() {
+    alert("Karan Hired✅");
   }
+
   return (
-    <div className="home-container" style={sectionStyle}>
+    <div className="home-container">
       <div class="hero">
         <div class="hero-info">
           <h1>Hi,I'm <span id="karan">Karan</span></h1>
           <h2>I'm a Developer</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in earum iusto nesciunt laboriosam, molestiae at alias officia, repellendus qui cumque mollitia voluptate impedit! Blanditiis hic dolore expedita sunt minima?</p>
-          <div class="buttons">
-            <button class="btn">Hire me</button>
+          <div class="buttons1">
+            <button class="btn" onClick={handleClick}>Hire me</button>
             <br />
             <ul class="ul-icon">
               <li><a href=""><FontAwesomeIcon icon={faGithub} /></a></li>

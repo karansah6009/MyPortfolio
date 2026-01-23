@@ -1,0 +1,49 @@
+.about{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about_container{
+    display: flex;
+    height: 800px;
+    width: 1500px;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    gap: 150px;
+    justify-content: space-between;
+}
+.about_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+    gap: 20px;
+}
+.about_left h1{
+    font-size: 50px;
+    margin: -20px 0px 20px;
+    color: black;
+}
+.about_left img{
+    width: 400px;
+    height:400px;
+    object-fit: cover;
+}
+.about_right{
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+.about_right h3{
+    font-size: 24px;
+    margin: 15px;
+}
+.about_right h3 span{
+    margin-right: 10px;
+    font-size: 40px;
+}

@@ -15,7 +15,7 @@
     border-radius: 10px;
     gap: 150px;
     justify-content: space-between;
-    background-color: rgb(45, 75, 79);
+    background-color: #1e293b;
 }
 .about_left{
     display: flex;
@@ -43,8 +43,15 @@
 .about_right h3{
     font-size: 24px;
     margin: 15px;
+    color: #a0aec0;
+    font-weight: 500;
 }
 .about_right h3 span{
     margin-right: 10px;
     font-size: 40px;
+}
+.about_right p{
+    font-size: 20px;
+    color: #0c0e0f;
+    line-height: 1.6;
 }

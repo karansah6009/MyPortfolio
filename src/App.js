@@ -20,10 +20,10 @@ function App() {
         </Routes>
       </BrowserRouter> */}
       <Navbar />
-      <Home />
-      <About />
-      <Contact />
-      <Projects />
+      <Home id="Homee" />
+      <About id="Aboutt" />
+      <Contact id="Contactt" />
+      <Projects id="Projectss" />
     </div>
   );
 }

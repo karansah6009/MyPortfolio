@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard';
 
 const Projects = () => {
   return (
-    <div className='project'>
+    <div id='projects' className='project'>
       <h1>Projects</h1>
       <div className="projects-container">
         <ProjectCard title="Project 1" main="Description of project 1"/>

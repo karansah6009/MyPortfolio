@@ -14,44 +14,44 @@ const Home = () => {
   }
 
   return (
-    <div className="home-container">
-      <div class="hero">
-        <div class="hero-info">
+    <div id='home' className="home-container">
+      <div className="hero">
+        <div className="hero-info">
           <h1>Hi,I'm <span id="karan">Karan</span></h1>
           <h2>I'm a Developer</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur in earum iusto nesciunt laboriosam, molestiae at alias officia, repellendus qui cumque mollitia voluptate impedit! Blanditiis hic dolore expedita sunt minima?</p>
-          <div class="buttons1">
-            <button class="btn" onClick={handleClick}>Hire me</button>
+          <div className="buttons1">
+            <button className="btn" onClick={handleClick}>Hire me</button>
             <br />
-            <ul class="ul-icon">
-              <li><a href=""><FontAwesomeIcon icon={faGithub} /></a></li>
-              <li><a href=""><FontAwesomeIcon icon={faLinkedin} /></a></li>
-              <li><a href=""><FontAwesomeIcon icon={faYoutube} /></a></li>
-              <li><a href=""><FontAwesomeIcon icon={faFacebook} /></a></li>
+            <ul className="ul-icon">
+              <li><a href="https://github.com/karansah6009"><FontAwesomeIcon icon={faGithub} /></a></li>
+              <li><a href="https://www.linkedin.com/in/karan-kumar-sah-80400b332/"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+              <li><a href="https://www.youtube.com/@KaranKumar-ly6vt"><FontAwesomeIcon icon={faYoutube} /></a></li>
+              <li><a href="https://www.facebook.com/karan.sah.5055233"><FontAwesomeIcon icon={faFacebook} /></a></li>
             </ul>
           </div>
         </div>
-        <div class="hero-img">
+        <div className="hero-img">
           <img src={profile} alt="persons-img" />
         </div>
         </div>
-        <div class="info-sec">
-          <div class="info-card"> 
+        <div className="info-sec">
+          <div className="info-card"> 
             <h1>2+</h1>
             <p>Years<br />Experience</p>
           </div>
 
-          <div class="info-card">
+          <div className="info-card">
             <h1>7+</h1>
             <p>Technical<br />Skills</p>
           </div>
 
-          <div class="info-card">
+          <div className="info-card">
             <h1>50+</h1>
             <p>Projects<br />Completed</p>
           </div>
 
-          <div class="info-card">
+          <div className="info-card">
             <h1>80+</h1>
             <p>Satisfied<br />Clients</p>
           </div>

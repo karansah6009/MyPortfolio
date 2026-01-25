@@ -42,6 +42,7 @@
 }
 .hero-img:hover{
     box-shadow: 0 0 25px #4acfee;
+    transform: translateZ(-5);
 }
 .hero-img img{
     position:relative;
@@ -83,6 +84,7 @@
     background: #53f8c9;
     box-shadow: 0 0 15px #4acfee;
     color: #0e1217;
+    transition: 0.4s;
 }
 .info-sec{
     display: flex;

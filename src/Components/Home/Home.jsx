@@ -37,26 +37,25 @@ const Home = () => {
         </div>
         <div className="info-sec">
           <div className="info-card"> 
-            <h1>2+</h1>
+            <h1>1+</h1>
             <p>Years<br />Experience</p>
           </div>
 
           <div className="info-card">
-            <h1>7+</h1>
+            <h1>2+</h1>
             <p>Technical<br />Skills</p>
           </div>
 
           <div className="info-card">
-            <h1>50+</h1>
+            <h1>20+</h1>
             <p>Projects<br />Completed</p>
           </div>
 
           <div className="info-card">
-            <h1>80+</h1>
+            <h1>40+</h1>
             <p>Satisfied<br />Clients</p>
           </div>
-        </div>
-      
+        </div> 
     </div>
   )
 }

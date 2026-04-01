@@ -28,6 +28,14 @@
     object-fit: cover;
     border-radius: 10px;
 }
+.left img{
+    animation: leftImgAnim 0.9s ease;
+}
+@keyframes leftImgAnim {
+    0% { transform: translateX(-200px);opacity: 0; }
+    50% { transform: translateX(100px); opacity: 0.5;}
+    100% { transform: translateX(0); opacity: 1;}
+}
 .right{
     flex: 1;
     display: flex;

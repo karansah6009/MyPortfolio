@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import portBck from '../Asset/port-bck.avif';
 import profile from '../Asset/profile.jpg'
+import profile1 from '../Asset/profile1.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -32,7 +33,8 @@ const Home = () => {
           </div>
         </div>
         <div className="hero-img">
-          <img src={profile} alt="persons-img" />
+          <img id="profile0" src={profile} alt="persons-img" />
+          <img id="profile1" src={profile1} alt="persons-img" />
         </div>
         </div>
         <div className="info-sec">

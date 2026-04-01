@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .about_container{
     display: flex;
@@ -35,11 +36,20 @@
     height:400px;
     object-fit: cover;
 }
+#about-img{
+    animation: aboutImgAnim 0.9s ease;
+}
+@keyframes aboutImgAnim {
+    0% { transform: translateX(-200px);opacity: 0; }
+    50% { transform: translateX(100px); opacity: 0.5;}
+    100% { transform: translateX(0); opacity: 1;}
+}
 .about_right{
     display: flex;
     flex-direction: column;
     margin-right: 100px;
 }
+
 .about_right h3{
     font-size: 24px;
     margin: 15px;

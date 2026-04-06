@@ -29,7 +29,7 @@
 .about_left h1{
     font-size: 50px;
     margin: -20px 0px 20px;
-    color: black;
+    color: rgb(148, 97, 97);
 }
 .about_left img{
     width: 400px;
@@ -53,7 +53,7 @@
 .about_right h3{
     font-size: 24px;
     margin: 15px;
-    color: #a0aec0;
+    color: #204b84;
     font-weight: 500;
 }
 .about_right h3 span{
@@ -62,6 +62,6 @@
 }
 .about_right p{
     font-size: 20px;
-    color: #0c0e0f;
+    color: #b8ccd6;
     line-height: 1.6;
 }

@@ -31,6 +31,9 @@
 .left img{
     animation: leftImgAnim 0.9s ease;
 }
+.left img.mix-blend-mode {
+    mix-blend-mode: multiply;
+}
 @keyframes leftImgAnim {
     0% { transform: translateX(-200px);opacity: 0; }
     50% { transform: translateX(100px); opacity: 0.5;}
@@ -47,7 +50,7 @@
     font-size: 40px;
     margin-top: -100px;
     margin-bottom: 90px;
-    color: black;
+    color: rgb(148, 97, 97);
 }
 .right form{
     display: flex;
@@ -80,4 +83,8 @@ form button{
     cursor: pointer;
     transition: background-color 0.3s;
     width: 421px;
+}
+form button:hover{
+    background-color: #3a9bdc;
+    transform: scale(0.99);
 }

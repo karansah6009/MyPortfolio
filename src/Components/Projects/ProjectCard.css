@@ -1,57 +1,173 @@
-.project-card{
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-}
-.project-card h2{
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-.project-card p{
-    font-size: 16px;
-    color: #555;
-    overflow:scroll;
-}
-.project_container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    border-radius: 10px;
-    background-color: #1e293b;
-    transition: all 0.3s ease;
-    border:1px solid #334155;
+/* ══════════════════════════════════════
+   PROJECT CARD
+══════════════════════════════════════ */
 
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
-.project_container:hover{
-    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
-    transform: scale(1.05);
-    transition: all 0.3s ease;
+
+/* Lift + teal border glow on hover */
+.project-card--hovered {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border-color: rgba(94, 234, 212, 0.25);
 }
-.buttons{
-    display: flex;
-    justify-content: space-evenly;
+
+/* ── Image Wrapper ── */
+.card_image_wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
 }
-.btn1{
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+.card_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
-.btn2{
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+/* Image zooms + dims on card hover */
+.project-card--hovered .card_image {
+  transform: scale(1.06);
+  filter: brightness(0.4);
 }
-.project_container p{
-    
+
+/* ── Hover Overlay (Demo + Source buttons) ── */
+.card_overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Overlay appears on card hover */
+.project-card--hovered .card_overlay {
+  opacity: 1;
+}
+
+.overlay_btn {
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s;
+  background: #5eead4;
+  color: #0a0f1e;
+  border: none;
+}
+
+/* Outline variant for source code button */
+.overlay_btn--outline {
+  background: transparent;
+  color: #5eead4;
+  border: 1.5px solid #5eead4;
+}
+
+.overlay_btn:hover {
+  transform: scale(1.04);
+}
+
+/* ── Card Body ── */
+.card_body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  flex: 1;
+}
+
+/* ── Tech Tags ── */
+.card_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.card_tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(94, 234, 212, 0.08);
+  color: #5eead4;
+  border: 1px solid rgba(94, 234, 212, 0.2);
+}
+
+/* ── Title ── */
+.card_title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+/* ── Description ── */
+.card_desc {
+  font-size: 13px;
+  color: rgba(232, 234, 240, 0.45);
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* ── Bottom Buttons ── */
+.card_buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Demo button — teal filled */
+.btn_demo {
+  flex: 1;
+  padding: 9px 0;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0a0f1e;
+  background: #5eead4;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn_demo:hover {
+  background: #2dd4bf;
+  transform: translateY(-1px);
+}
+
+/* Source Code button — outline */
+.btn_source {
+  flex: 1;
+  padding: 9px 0;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(232, 234, 240, 0.6);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn_source:hover {
+  border-color: #5eead4;
+  color: #5eead4;
 }

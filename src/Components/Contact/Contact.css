@@ -1,90 +1,343 @@
-.contact{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.contact_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    height: 700px;
-    width: 1500px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    background-color: #1e293b;
+/* ══════════════════════════════════════
+   CONTACT SECTION
+══════════════════════════════════════ */
 
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #0f172a;
 }
-.left{
-    flex: 1;
-    display: flex;
+
+/* ── Main Card ── */
+.contact_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 1300px;
+  min-height: 680px;
+  padding: 60px 72px;
+  background-color: #1e293b;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ══════════════════════════════════════
+   LEFT SIDE — Image + Info + Socials
+══════════════════════════════════════ */
+
+.contact_left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+  width: 300px;
+}
+
+/* Profile / character image */
+.contact_img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(94, 234, 212, 0.25);
+  animation: slideInLeft 0.9s ease;
+}
+
+@keyframes slideInLeft {
+  0%   { transform: translateX(-200px); opacity: 0; }
+  50%  { transform: translateX(30px);   opacity: 0.5; }
+  100% { transform: translateX(0);      opacity: 1; }
+}
+
+/* ── Info Cards (location / email / status) ── */
+.contact_info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.info_card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  transition: border-color 0.2s;
+}
+
+.info_card:hover {
+  border-color: rgba(94, 234, 212, 0.2);
+}
+
+.info_icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.info_label {
+  font-size: 11px;
+  color: rgba(232, 234, 240, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.info_value {
+  font-size: 13px;
+  color: rgba(232, 234, 240, 0.75);
+  font-weight: 500;
+}
+
+/* "Available for work" shown in teal with a pulse dot */
+.info_value.available {
+  color: #5eead4;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.info_value.available::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #5eead4;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+/* ── Social Icons Row ── */
+.contact_socials {
+  display: flex;
+  gap: 10px;
+}
+
+.social_btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+}
+
+.social_btn:hover {
+  border-color: #5eead4;
+  background: rgba(94, 234, 212, 0.08);
+  transform: translateY(-3px);
+}
+
+/* ══════════════════════════════════════
+   RIGHT SIDE — Form
+══════════════════════════════════════ */
+
+.contact_right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Small label above title */
+.contact_eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #5eead4;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* "Contact Me" heading */
+.contact_title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+/* "Me" in teal */
+.contact_title span {
+  color: #5eead4;
+}
+
+.contact_subtitle {
+  font-size: 14px;
+  color: rgba(232, 234, 240, 0.45);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 420px;
+}
+
+/* ── Success Message ── */
+.success_msg {
+  background: rgba(94, 234, 212, 0.1);
+  border: 1px solid rgba(94, 234, 212, 0.3);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #5eead4;
+  margin-bottom: 20px;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Form Layout ── */
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Name + Email sit side by side */
+.form_row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Each label + input group */
+.form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form_group label {
+  font-size: 12px;
+  color: rgba(232, 234, 240, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ── Inputs & Textarea ── */
+.contact_form input,
+.contact_form textarea {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #e8eaf0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  outline: none;
+  resize: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+/* Placeholder text */
+.contact_form input::placeholder,
+.contact_form textarea::placeholder {
+  color: rgba(232, 234, 240, 0.25);
+}
+
+/* Teal glow on focus */
+.contact_form input:focus,
+.contact_form textarea:focus {
+  border-color: rgba(94, 234, 212, 0.4);
+  box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.08);
+}
+
+/* ── Submit Button ── */
+.submit_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  color: #0a0f1e;
+  background: #5eead4;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+  margin-top: 4px;
+}
+
+.submit_btn:hover {
+  background: #2dd4bf;
+  transform: translateY(-2px);
+}
+
+.submit_btn:active {
+  transform: scale(0.98);
+}
+
+/* Arrow inside button slides right on hover */
+.btn_arrow {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.submit_btn:hover .btn_arrow {
+  transform: translateX(4px);
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .contact_container {
+    flex-direction: column;
+    width: 90%;
+    padding: 40px 32px;
+    gap: 40px;
+  }
+
+  .contact_left {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .contact_img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .contact_title {
+    font-size: 34px;
+  }
+
+  .form_row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact_title {
+    font-size: 28px;
+  }
+
+  .contact_left {
+    flex-direction: column;
     align-items: center;
-}
-.left img{
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-.left img{
-    animation: leftImgAnim 0.9s ease;
-}
-.left img.mix-blend-mode {
-    mix-blend-mode: multiply;
-}
-@keyframes leftImgAnim {
-    0% { transform: translateX(-200px);opacity: 0; }
-    50% { transform: translateX(100px); opacity: 0.5;}
-    100% { transform: translateX(0); opacity: 1;}
-}
-.right{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 50px;
-}
-.right h1{
-    font-size: 40px;
-    margin-top: -100px;
-    margin-bottom: 90px;
-    color: rgb(148, 97, 97);
-}
-.right form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}   
-form input, form textarea{
-    color: blanchedalmond;
-    padding: 10px;
-    font-size: 16px;
-    width: 400px;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: none;
-    background-color: #314470;
-}
-form input, form textarea:focus{
-    outline: none;
-    border-color: #0f172a;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-}
-form button{
-    padding: 10px;
-    font-size: 18px;
-    background-color: #4acfee;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 421px;
-}
-form button:hover{
-    background-color: #3a9bdc;
-    transform: scale(0.99);
+  }
 }

@@ -1,17 +1,109 @@
-.projects-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 100px;
-    justify-content: center;
-    margin-top: -20px;
+/* ══════════════════════════════════════
+   PROJECTS SECTION
+══════════════════════════════════════ */
+
+.project {
+  padding: 80px 60px 120px;
+  background-color: #0f172a;
+  min-height: 100vh;
 }
-.project{
-    padding: 10px 0px 10px 40px;
-    text-align: start;
-    font-size: 25px;
-    padding-bottom: 150px;
-    background-color: #0f172a
+
+/* ── Section Header ── */
+.project_header {
+  text-align: center;
+  margin-bottom: 40px;
 }
-.project h1{
-    color: #f9f9f9;
+
+/* Small label above title */
+.project_eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #5eead4;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/* "My Projects" — "Projects" in teal */
+.project_title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -1px;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+
+.project_title span {
+  color: #5eead4;
+}
+
+.project_subtitle {
+  font-size: 15px;
+  color: rgba(232, 234, 240, 0.45);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Filter Tabs ── */
+.filter_tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.filter_btn {
+  padding: 8px 24px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  color: rgba(232, 234, 240, 0.5);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: capitalize;
+}
+
+.filter_btn:hover {
+  color: #fff;
+  border-color: rgba(94, 234, 212, 0.3);
+}
+
+/* Active filter tab */
+.filter_btn--active {
+  background: rgba(94, 234, 212, 0.1);
+  border-color: #5eead4;
+  color: #5eead4;
+}
+
+/* ── Cards Grid ── */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .project {
+    padding: 60px 24px 80px;
+  }
+
+  .project_title {
+    font-size: 34px;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
 }
